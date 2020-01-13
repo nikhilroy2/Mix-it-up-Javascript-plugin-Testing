@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+        background: #333;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background: red;
+        display: inline-block;
+        text-align : center;
+        line-height: 200px;
+        color: white;
+    }
+   button{
+       min-width: 80px;
+       background: #222;
+       color: #fff;
+       font-size: 20px;
+       border: none;
+       outline: none;
+       padding:.3rem 1rem;
+       display: inline-block;
+       cursor: pointer;
+       margin: 5px;
+       box-shadow: 1px 1px 3px inset #fff;
+   }
+   button:active{
+       color: #222;
+       background: #ddd;
+   }
+   .bd{
+       background: url('https://cdn.pixabay.com/photo/2017/02/26/00/28/borders-2099198__340.png') center/cover no-repeat;
+   }
+   .in{
+       background: url('https://cdn.pixabay.com/photo/2017/01/03/22/15/background-1950783__340.jpg') center/cover no-repeat;
+   }
+   .pk{
+       background: url('https://cdn.pixabay.com/photo/2016/03/31/22/21/asia-1296989__340.png') center/cover no-repeat;
+   }
+   .np{
+       background: url('https://cdn.pixabay.com/photo/2017/02/26/00/34/borders-2099217__340.png') center/cover no-repeat;
+   }
+    
+    </style>
+</head>
+<body>
+    <button data-filter="all">All</button>
+    <button data-filter=".bd">Bangladesh</button>
+    <button data-filter=".pk">Pakistan</button>
+    <button data-filter=".np">Nepal</button>
+    <button data-filter=".in">India</button>
+    <!-- Be sure to add (.) at data-filtelr -->
+    <br>
+    <div class="container">
+
+        
+    <div class="box mix bd in"></div>
+    <div class="box mix in"></div>
+    <div class="box mix bd"></div>
+    <div class="box mix pk"></div>
+    <div class="box mix np"></div>
+    <div class="box mix in"></div>
+    <div class="box mix bd"></div>
+    <div class="box mix np"></div>
+    <div class="box mix bd"></div>
+    <div class="box mix pk"></div>
+    </div>
+
+    <script src="mixitup.min.js"></script>
+    <script>
+    var mixer = mixitup('.container');
+    </script>
+</body>
+</html>
